@@ -1,0 +1,79 @@
+@media screen and (max-width: 768px) {
+    body,html{
+        width: 100vh;
+    }
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-sizing: border-box;
+    }
+
+    .logobar {
+        order: 1;
+    }
+
+    .burger {
+        order: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px; /* Explicitly set width */
+        height: 40px; /* Explicitly set height */
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        user-select: none;
+    }
+
+    .cv {
+        order: 3;
+    }
+
+    .bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; /* Start just below the header */
+        left: 0;
+        width: 100%;
+        background: linear-gradient(360deg, #1a1a1a, #000000);
+        text-align: center;
+        max-height: 0; /* Start hidden */
+        overflow: hidden;
+        transition: max-height 0.3s ease; /* Smooth sliding effect */
+    }
+
+    .bar.active {
+        max-height: 300px; /* Adjust height based on menu content */
+    }
+
+    /* Rotate arrow icon when active */
+    .burger.active i {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease-in-out;
+    }
+    .aboutleft{
+        display: none;
+    }
+    .divabout{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .aboutright{
+        width: 90%;
+    }
+    .skills-grid{
+        grid-template-columns: repeat(auto-fit, minmax(130px, 150px));
+        gap: 25px;
+    }
+    
+}

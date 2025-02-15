@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Chatterjee</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="MobileResponsive.css">
+    <script src="https://kit.fontawesome.com/074c0c0c50.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+
+
+    <div class="Loader" id="loader">
+        <span class="loader"></span>
+        <h3> WELCOME </h3>
+    </div>
+
+   
+    <!-- Loader -->
+    
+    <div id="main-content" class="content">
+        <header class="head">
+            <div class="logobar">
+                <div class="circle"></div>
+            </div>
+            <div class="burger">
+                <i class="fa-solid fa-angle-down fa-xl" style="color: #f8f9fc" style="height: 40px" style="width: 40px"></i>
+            </div>
+            <nav class="bar">
+                <ul class="listmain">
+                    <li class="list"><a href="#home">HOME</a></li>
+                    <li class="list"><a href="#about">ABOUT</a></li>
+                    <li class="list"><a href="#projects">PROJECTS</a></li>
+                    <li class="list"><a href="#contact">CONTACT</a></li>
+                </ul>
+            </nav>
+            <button class="cv" onclick=downloadCV()>Download CV</button>
+        </header>
+
+        <div class="background" id="home" cl>
+            <div class="vdo">
+                <video class="bg" id="bgVideo" autoplay muted loop>
+                    <source src="Resources/12716-241674181_large.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="center" id="content">
+                <div class="text">
+
+                    <h1>HELLO</h1>
+                    <h2>I'm ADITYA CHATTERJEE,</h2>
+                    <h3> an aspiring <span id="element"></span></h3>
+
+                    <div class="techLogos">
+                        <i class="devicon-html5-plain colored"></i>
+                        <i class="devicon-css3-plain colored"></i>
+                        <i class="devicon-javascript-plain colored"></i>
+                        <i class="devicon-java-plain colored"></i>
+                        <i class="devicon-tailwindcss-original colored"></i>
+                        <i class="devicon-androidstudio-plain colored"></i>
+                        <i class="devicon-react-original colored"></i>
+                    </div>
+                </div>
+                <div class="rightcenter">
+                    <div class="profile">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr">
+        <section id="about" class="about">
+            <div class="divabout">
+                <div class="aboutleft"><img
+                        src="Resources/hr-manager-character-illustration_288067-465-removebg-preview.png" alt=""></div>
+                <div class="aboutright">
+                    <div>
+                        <h2>ABOUT ME...</h2>
+                        <p>IT fresher currently pursuing a Bachelor of Engineering (B.E.) in Information Technology,
+                            with a
+                            diploma in Computer Science. Proficient in core programming languages like Java and C++ and
+                            experienced in web technologies including HTML, CSS, and JavaScript. Known for strong
+                            problem-solving skills and a quick learning ability.
+                        </p>
+                    </div>
+                    <div class="tab">
+                        <button class="tlinks button " onclick="showTab('skills')">Skills</button>
+                        <button class="tlinks button" onclick="showTab('education')">Education</button>
+                    </div>
+                    <!-- Education Content (Default Visible) -->
+                    <div id="education" class="tab-content" style="display: block;">
+                        <div class="education-container">
+                            <div class="education-box">
+                                <h3>Diploma in Computer Science & Engineering</h3>
+                                <p>Siliguri Government Polytechnic</p>
+                                <p>2020 - 2023</p>
+                            </div>
+                            <div class="education-box">
+                                <h3>Bachelor of Engineering - IT</h3>
+                                <p>University Institute of Technology, Burdwan University</p>
+                                <p>2023 - 2026</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skills Content (Initially Hidden) -->
+                    <div id="skills" class="tab-content">
+                        <div class="skills-grid">
+                            <div class="skill"><i class="devicon-html5-plain colored"></i> HTML</div>
+                            <div class="skill"><i class="devicon-css3-plain colored"></i> CSS</div>
+                            <div class="skill"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</div>
+                            <div class="skill"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+                            <div class="skill"><i class="devicon-react-original colored"></i> React</div>
+                            <div class="skill"><i class="devicon-java-plain colored"></i> Java</div>
+                            <div class="skill"><i class="devicon-androidstudio-plain colored"></i> Android Studio</div>
+                            <div class="skill"><i class="devicon-mysql-plain colored"></i> MySQL</div>
+                            <div class="skill"><i class="devicon-git-plain colored"></i> Git & GitHub</div>
+                            <div class="skill"><i class="devicon-docker-plain colored"></i>Docker</div>
+                            <div class="skill"><i class="devicon-python-plain colored"></i>Python</div>
+                            <div class="skill"><i class="devicon-cplusplus-plain colored"></i>C/C++</div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <hr class="hr">
+        <section id="projects" class="projects">
+            <h2>PROJECTS</h2>
+            <div class="project-container">
+                <!-- Project 1 -->
+                <div class="project" id="project-1">
+                    <h3>Password Manager with MySQL Database</h3>
+                    <p>This Password Manager is a secure and efficient solution for storing and managing different
+                        passwords
+                        for various accounts in one place. Built with a robust MySQL database, it ensures encrypted
+                        storage
+                        and easy retrieval of credentials while maintaining user privacy and security. The software
+                        provides
+                        a user-friendly interface to add, update, and delete passwords, making it a convenient tool for
+                        managing multiple accounts securely.</p>
+                    <a href="https://github.com/CodeClasmic/Password-Manager" target="_blank"
+                        rel="noopener noreferrer">GitHub
+                        <i class="devicon-github-original"></i>
+                    </a>
+                </div>
+                <div class="project hiddenp" id="project-3">
+                    <h3>Simple BlockChain Simulation</h3>
+                    <p> This project is a basic blockchain simulation implemented in Java, demonstrating fundamental
+                        blockchain concepts such as block creation, secure hashing, proof-of-work, and tamper detection.
+                        Each block is linked securely using SHA-256 hashing, ensuring data integrity. The simulation
+                        supports mining with an adjustable proof-of-work difficulty, allowing users to understand the
+                        computational effort required for block validation. Additionally, the system verifies the
+                        integrity
+                        of the blockchain and detects any tampering when data is modified, making it a useful
+                        educational
+                        tool for exploring blockchain security and functionality.</p>
+                    <a href="https://github.com/CodeClasmic/BlockChain-Test" target="_blank"
+                        rel="noopener noreferrer">GitHub
+                        <i class="devicon-github-original"></i>
+                    </a>
+                </div>
+                <!-- Project 3 -->
+                <div class="project hiddenp" id="project-3">
+                    <h3>Student Management System</h3>
+                    <p> This Java console application efficiently manages student records while demonstrating
+                        object-oriented programming (OOP) principles. It organizes student data using classes like
+                        `Student`
+                        and `Subject`, allowing users to add, display, search, and delete student records. The system
+                        automatically calculates the average marks for each student based on their subject scores. With
+                        a
+                        structured approach, the `StudentManager` class handles all operations, while a menu-driven
+                        interface in the `Main` class ensures smooth user interaction. This project provides a practical
+                        example of OOP concepts in Java, making it a useful tool for academic record management.</p>
+                    <a href="https://github.com/CodeClasmic/Student-Management-System" target="_blank"
+                        rel="noopener noreferrer">GitHub
+                        <i class="devicon-github-original"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="project-button">
+                <button class="prev-button pbutton" onclick="PrevProject()">
+                    <h1>
+                        < </h1>
+                </button>
+                <button class="next-button pbutton" onclick="NextProject()">
+                    <h1>></h1>
+                </button>
+            </div>
+        </section>
+        <hr class="hr">
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <!-- Left Side: Get in Touch & Social Icons -->
+                <div class="contact-left">
+                    <h2>Get in Touch</h2>
+                    <p>Feel free to reach out for collaborations or any inquiries.</p>
+
+                    <div class="contact-info">
+                        <p><i class="fa-duotone fa-solid fa-paper-plane"></i>
+                            <a href="mailto:your.adityachatterjee386@gmail.com"> adityachatterjee386@gmail.com</a>
+                        </p>
+                        <p><i <i class="fa-solid fa-mobile"></i><a href="tel:+1234567890"> +91 87553 94298</a></p>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="https://github.com/CodeClasmic" target="_blank"><i
+                                class="devicon-github-original "></i></a>
+                        <a href="https://www.linkedin.com/in/aditya-chatterjee-10990231a" target="_blank">
+                            <i class="devicon-linkedin-plain colored"></i>
+                        </a>
+                        <a href="https://www.facebook.com/aditya.ambrous" target="_blank"><i
+                                class="fa-brands fa-facebook" style="color: #74C0FC;"></i></a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <div class="contact-right">
+                    <i class="fa-sharp fa-solid fa-address-card fa-xl" style="color: #f35b35;"></i>
+                    <form action="https://formspree.io/f/manqdkey" method="POST" ">
+                    <input type=" text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="send cv">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <hr class="hr">
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Aditya Chatterjee | All Rights Reserved</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

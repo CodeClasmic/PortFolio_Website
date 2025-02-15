@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.Loader {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.5s ease;
+}
+
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 80px;  /* Bigger size */
+    height: 80px;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: spin 1.2s linear infinite, glowEffect 2s infinite alternate;
+}
+
+.loader:after {
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes spin {
+    0%, 100% {
+        box-shadow: .3em 0px 0 0px currentcolor;
+    }
+    12% {
+        box-shadow: .3em .3em 0 0 currentcolor;
+    }
+    25% {
+        box-shadow: 0 .3em 0 0px currentcolor;
+    }
+    37% {
+        box-shadow: -.3em .3em 0 0 currentcolor;
+    }
+    50% {
+        box-shadow: -.3em 0 0 0 currentcolor;
+    }
+    62% {
+        box-shadow: -.3em -.3em 0 0 currentcolor;
+    }
+    75% {
+        box-shadow: 0px -.3em 0 0 currentcolor;
+    }
+    87% {
+        box-shadow: .3em -.3em 0 0 currentcolor;
+    }
+}
+
+/* Updated glow effect without pink */
+@keyframes glowEffect {
+    0% {
+        color: #00ffff; /* Cyan */
+        filter: drop-shadow(0 0 8px #00ffff);
+    }
+    50% {
+        color: #ff4500; /* 🔥 Crimson/Orange-Red */
+        filter: drop-shadow(0 0 12px #ff4500);
+    }
+    100% {
+        color: orchid; /* Yellow */
+        filter: drop-shadow(0 0 10px #ffff00);
+    }
+}
+
+
+.Loader h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    animation: textGlow 2s infinite alternate;
+}
+
+/* Glowing text effect (matches the loader) */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 8px #00ffff, 0 0 16px #00ffff;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 18px #00ff00;
+    }
+    100% {
+        text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00;
+    }
+}
